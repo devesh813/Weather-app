@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.weather-app {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+    position: relative; /* Added */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.weather-app h1 {
+    margin-bottom: 20px;
+    color: #5151E5;
+}
+
+.search {
+    margin-bottom: 20px;
+}
+
+.search input {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.search input:focus {
+    border-color: #5151E5;
+    outline: none;
+}
+
+.search button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #5151E5;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #72EDF2;
+    color: #333;
+}
+
+.icon-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #5151E5;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.weather-info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.weather-info h2 {
+    margin-bottom: 10px;
+    color: #5151E5;
+}
+
+.weather-info p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.hidden {
+    display: none;
+}
+
+.place-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.place-container a {
+    margin-left: 10px;
+    font-size: 0.9em;
+    color: #5151E5;
+    text-decoration: none;
+}
+
+.place-container a:hover {
+    text-decoration: underline;
+}
